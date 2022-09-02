@@ -1,0 +1,30 @@
+.buttons-list{
+    display: flex;
+    justify-content: center;
+}
+.btn-item{
+    margin-right: 8px;
+}
+.buttons-list{
+    margin-bottom: 50px;
+}
+
+.buttons-list .filtr-btn{
+    
+    padding: 6px 22px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    border-width: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    cursor: pointer;
+    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
