@@ -1,16 +1,21 @@
-.header-flex{
+.header__container{
     display: flex;
     align-items: center;
 }
-.site-nav-list{ 
+.navigation__list{ 
     display: flex;
     align-items: center;  
 }
-.contact-links{
+.contact{
     display: flex;
     align-items: center;   
 }
 
-.page-header{
+.header{
     background: var(--background-color);
+    border-bottom: 1px solid #ececec;
 } 
+
+.header__border{
+    border-bottom: transparent;
+}

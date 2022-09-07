@@ -2,7 +2,7 @@
     padding-bottom: 94px;
     }
 
-.section-title{
+.services__title{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -12,21 +12,21 @@
     margin-bottom: 50px;
     }
 
-.services-list{
+.services__list{
     display: flex;
     }
 
-.img-item:not(:last-child){
+.services__item:not(:last-child){
     margin-right: 30px;
     }
 
 
-.services-thumb{    
+.services__thumb{    
     position: relative;
     
     }
 
-.services-description{
+.services__description{
     position: absolute;
     font-weight: 700;
     font-size: 14px;

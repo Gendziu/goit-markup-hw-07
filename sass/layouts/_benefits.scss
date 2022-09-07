@@ -7,19 +7,11 @@ main{
     padding-bottom: 94px;
     }
 
-.benefits-list{
+.benefits__list{
     display: flex;
     }
 
-.benefits-item:not(:last-child){
-    margin-right:30px;
-    }
-
-.benefits-item{
-    max-width: 270px;
-    }
-
-.benefits-list .title{
+.benefits__title{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -28,14 +20,21 @@ main{
     margin-bottom: 10px;
     }
 
-.benefits-list .text{
+.benefits__text{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+             }
+
+.benefits__item{
+    max-width: 270px;
+    &:not(:last-child){
+        margin-right:30px;
+        }
     }
- 
-.icon-box{
+
+.benefits__icon-box{
     display: flex;
     justify-content: center;
     align-items: center;

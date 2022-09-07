@@ -14,7 +14,7 @@
     visibility: hidden;
     }  
 
-.modal-close{
+.modal__btn-close{
     position: absolute;
     top: 8px;
     right: 8px;
@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 
-.modal-title{
+.modal__title{
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 12px;
@@ -38,20 +38,19 @@
     color: var(--title-main-color)
 }
 
-.close-icon{
+.modal__close-icon{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.close-icon:hover,
-.close-icon:focus{
+    &:hover,
+    &:focus{
     fill: var(--logo-secondary-color);
 }
+}
 
-.form-input{
+.modal__form-input{
     width: 100%;
     height: 40px;
     padding-left: 42px;
@@ -59,9 +58,13 @@
     border-radius: 4px;
     outline: transparent;
     transition: borde-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:focus{
+        border-color:var(--logo-secondary-color) ;
+    }
 }
 
-.input-title{
+.modal__input-title{
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
@@ -70,11 +73,11 @@
     margin-bottom: 4px;
 }
 
-.input-wrap:not(:first-child){
+.modal__input-wrap:not(:first-child){
     margin-top: 10px;
 }
  
-.feedback-form{
+.modal__feedback-form{
     width: 100%;
     height: 120px;
     padding: 12px 16px;
@@ -83,13 +86,23 @@
     border-radius: 4px;
     resize: none;
     outline: transparent;
+    
+    &::placeholder{
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+    &:focus{
+        border-color: var(--logo-secondary-color);
+    }
 }
 
-.user-policy-field{
+.user-policy{
     margin-bottom: 30px;
 }
 
-.check-label{
+.user-policy__check-label{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -97,16 +110,8 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    }
-
-.user-policy{
-    color: var(--logo-secondary-color);
-    margin-left: 5px;
 }
-
-
-
-.check-label .checkbox-wrap{
+.user-policy__checkbox-wrap{
     width: 16px;
     height: 15px;
     display: flex;
@@ -116,56 +121,47 @@
     border-radius: 4px;
     margin-right: 7px;
     transition: background-color 250ms linear;
+    .user-policy__input-check:checked + &{
+        background-color: var(--logo-secondary-color);
+        border: none;
+    }
+    .user-policy__input-check:focus + &{
+        border-color: var(--logo-secondary-color);
+    }
 } 
 
-.policy-check{
+   
+
+.user-policy__agreement{
+    color: var(--logo-secondary-color);
+    margin-left: 5px;
+}
+ 
+.user-policy__check-icon{
 fill: transparent;
-}
 
-.input-check:checked + .checkbox-wrap{
-    background-color: var(--logo-secondary-color);
-    border: none;
-}
-
-.input-check:focus + .checkbox-wrap{
-    border-color: var(--logo-secondary-color);
-}
-
-.input-check:checked + .checkbox-wrap .policy-check{
+.user-policy__input-check:checked + .user-policy__checkbox-wrap &{
     fill: var(--background-color);
 }
+}
 
-
-.input-icon-thumb{
+.modal__input-thumb{
     position: relative;
 }
-.modal-icon{
+
+.modal__contact-icon{
     position: absolute;
     top: 50%;
     left: 15px;
    transform: translateY(-50%);
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.feedback-form::placeholder{
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
-
-.form-input:focus{
-    border-color:var(--logo-secondary-color) ;
-}
-
-.form-input:focus+ .modal-icon{
+   
+   .modal__form-input:focus+ &{
     fill: var(--logo-secondary-color);
 }
-
-.feedback-form:focus{
-    border-color: var(--logo-secondary-color);
 }
-.modal-send-btn{
+
+.modal__send-btn{
     display: flex;
     align-items: center;
     text-align: center;
@@ -185,14 +181,12 @@ fill: transparent;
     color: #FFFFFF;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus{
+     transform: scale(1.02);
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
-.modal-send-btn:hover,
-.modal-send-btn:focus{
-transform: scale(1.02);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
 
 .modal{
     position: absolute;
